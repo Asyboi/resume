@@ -1,0 +1,201 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Aslan Wang} \\ \vspace{1pt}
+    \small \href{mailto:aslanwang187@gmail.com}{\underline{aslanwang187@gmail.com}} $|$
+    \href{https://github.com/Asyboi}{\underline{github.com/Asyboi}} $|$
+    \href{https://devpost.com/aslanwang187}{\underline{devpost.com/aslanwang187}} $|$
+    \href{https://linkedin.com/in/aslanwang}{\underline{linkedin.com/in/aslanwang}} $|$
+    (516) 806-9318
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Illinois Urbana-Champaign}{Expected May 2028}
+      {B.S. in Computer Science and Music}{}
+    \item \small{
+      \textbf{Relevant Coursework}{: Data Structures and Algorithms, Computer Systems, Discrete Structures, Software Design Lab} \\
+      \textbf{Awards}{: 7x Hackathon Winner (incl. YHack 2026, HackIllinois 2026, HooHack 2026, SpartaHack 2026)}
+    }
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Major League Hacking}{July 2026 -- Sept. 2026}
+      {AI Intern}{New York, NY}
+      \resumeItemListStart
+        \resumeItem{Built a GitHub API pipeline scoring MLH fellowship applicant repositories on commit-history patterns derived from 712 previously flagged applications, detecting first commit dominance, commit drift, and commit count}
+        \resumeItem{Deployed the pipeline as a FastAPI webhook service on Railway, syncing scores through Twilio Segment into Salesforce, automating manual repo inspection for admissions staff on 1,000+ applications/cycle}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Recost}{Feb. 2026 -- May 2026}
+      {Co-Founder \& CTO}{Champaign, IL}
+      \resumeItemListStart
+        \resumeItem{Hit a Top 20 Product Hunt ranking and 130+ upvotes on launch by architecting an API cost observability SaaS on Cloudflare Workers + D1}
+        \resumeItem{Flagged API cost waste categories such as batching, caching, concurrency, N+1 calls, and rate limiting across 6 programming languages by building a VS Code extension with AST-based scanners}
+        \resumeItem{Attributed real-time per-call cost across 14 API providers and 25 provider endpoints by shipping Node and Python middleware SDKs that intercept fetch/http traffic}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Screenz.ai}{Feb. 2026 -- Apr. 2026}
+      {Full-Stack Engineer Intern}{Miami, FL (Remote)}
+      \resumeItemListStart
+        \resumeItem{Reduced recruiter screening time by $\sim$40\% by building a candidate-scoring pipeline ranking 1,000+ applicants against job criteria for 100+ companies using React, Next.js, and PostgreSQL}
+        \resumeItem{Developed fully automated AI-led interviews with no human moderation, leading to 6.5x faster time-to-hire, by integrating Claude and ElevenLabs models via REST and WebSocket APIs into candidate and recruiter workflow}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Bastion-Agent} [\href{https://github.com/Asyboi/bastion-agent}{\underline{GitHub}}] $|$ \emph{Python, SQLite, MCP}}{}
+          \resumeItemListStart
+            \resumeItem{Compressed Python failure traces from $\sim$8K to under 600 tokens by developing an agent-first error-observability library using decorators to capture exceptions, local state, and execution flow into SQLite}
+            \resumeItem{Cut error identification from minutes of manual log reading to a single query by implementing an MCP server with 10 query tools letting coding agents diagnose failures via real-time error fingerprinting}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{\href{https://github.com/Asyboi/Calyx}{Agentic Multilayer Platform for EMS Reports (Calyx)}} [\href{https://devpost.com/software/emt-tool}{\underline{Devpost}}] $|$ \emph{React, FastAPI, Claude/Gemini API}}{}
+          \resumeItemListStart
+            \resumeItem{Built a multilayer AI orchestration platform that automates the process of writing patient care and quality improvement reports for EMTs and hospital administrators}
+            \resumeItem{Reached 90\%+ field accuracy against EMT-written ground truth across 40+ test incidents by routing body footage, radio calls, and dispatch records to specialist vision, speech, and text models under a supervising agent}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Eco Router (Yale YHack 2026 Winner)} [\href{https://devpost.com/software/zero-carbs-tonight}{\underline{Devpost}}] $|$ \emph{Optuna, FastAPI, Rust}}{}
+          \resumeItemListStart
+            \resumeItem{Identified Pareto-optimal inference configurations reducing carbon intensity by 2.9$\times$ by benchmarking 60+ Qwen model runs on NVIDIA DGX Spark across latency, quality, and SCI using Optuna Bayesian optimization}
+            \resumeItem{Extrapolated software carbon intensity for models up to 500B parameters by fitting a scaling-law regression to per-token emissions measured across Qwen model sizes}
+            \resumeItem{Won YHack 2026's Built With Zed track by shipping a Zed IDE extension built in Rust routing developers to the greenest model meeting their quality threshold, supported by a FastAPI + SQLite Pareto frontier store}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C++, C, Java, JavaScript, TypeScript, Rust, SQL} \\
+     \textbf{Frameworks}{: FastAPI, Flask, Express, Node.js, Next.js, React, Vite, Hono, SQLite} \\
+     \textbf{Developer Tools}{: Git, AWS, Docker, Firebase, Cloudflare Workers, Vercel, Render, Railway, PostgreSQL}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
