@@ -129,17 +129,6 @@
   \resumeSubHeadingListEnd
 
 
-%-----------PROGRAMMING SKILLS-----------
-\section{Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Programming Languages}{: Python, C++, C, Java, JavaScript, TypeScript, Rust, SQL, R} \\
-     \textbf{Web Technologies \& Frameworks}{: FastAPI, Flask, Express, Node.js, Next.js, React, Vite, Hono, SQLite} \\
-     \textbf{Development Tools}{: Git, AWS, Azure, Docker, Kubernetes, Firebase, Cloudflare Workers, Vercel, Railway, PostgreSQL}
-    }}
- \end{itemize}
-
-
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
@@ -148,25 +137,27 @@
       {Major League Hacking}{July 2026 -- Sept. 2026}
       {AI Intern}{New York, NY}
       \resumeItemListStart
-        \resumeItem{Built an applicant repo scoring pipeline derived from 712 previously flagged applications for MLH Fellowship using GitHub API, detecting commit patterns like first commit dominance, commit drift, and commit count}
-        \resumeItem{Automated manual repo inspection for admissions staff on 1,000+ applications/cycle by deploying the pipeline as a FastAPI webhook service on Railway, syncing scores through Twilio Segment into Salesforce}
+        \resumeItem{Saved staff 100+ hrs/cycle reviewing 1,000+ applicants by surfacing 3 checkable commit facts per repo}
+        \resumeItem{Synced commit signals for all applicants into Salesforce by deploying a FastAPI webhook on Railway}
+        \resumeItem{Gave 100\% of applicants (up from 47\%) tailored interview questions generated from their own repo code}
+        \resumeItem{Kept 211 valid applicants in review by triaging 785 unreadable repos into a cause-labeled queue}
       \resumeItemListEnd
 
     \resumeSubheading
       {Recost}{Feb. 2026 -- May 2026}
       {Co-Founder \& CTO}{Champaign, IL}
       \resumeItemListStart
-        \resumeItem{Hit Top 20 on Product Hunt (130+ upvotes) with an API cost observability SaaS on Cloudflare Workers + D1}
-        \resumeItem{Flagged API cost waste categories such as batching, caching, concurrency, N+1 calls, and rate limiting across 6 programming languages by building a VS Code extension with AST-based scanners}
-        \resumeItem{Attributed real-time per-call cost across 14 API providers and 25 provider endpoints by shipping Node and Python middleware SDKs that intercept fetch/http traffic}
+        \resumeItem{Tracked real-time per-call cost across 14 API providers and 25 endpoints via Node.js and Python SDKs}
+        \resumeItem{Flagged 5 cost-waste patterns (N+1 calls, no caching\ldots) in 6 languages with an AST-based VS Code extension}
+        \resumeItem{Ranked Top 20 on Product Hunt (130+ upvotes) with an API-cost SaaS on Cloudflare Workers + D1}
       \resumeItemListEnd
 
     \resumeSubheading
       {Screenz.ai}{Feb. 2026 -- Apr. 2026}
       {Full-Stack Engineer Intern}{Miami, FL (Remote)}
       \resumeItemListStart
-        \resumeItem{Reduced recruiter screening time by $\sim$40\% by building a candidate-scoring pipeline ranking 1,000+ applicants against job criteria for 100+ companies using React, Next.js, and PostgreSQL}
-        \resumeItem{Developed fully automated AI-led interviews with no human moderation, leading to 6.5x faster time-to-hire, by integrating Claude and ElevenLabs models via REST and WebSocket APIs into candidate and recruiter workflow}
+        \resumeItem{Cut recruiter screening time $\sim$40\% for 20+ companies with a Next.js + PostgreSQL scoring pipeline}
+        \resumeItem{Cut time-to-hire 6.5x by shipping AI interviews on Claude + ElevenLabs APIs streamed over WebSockets}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -176,25 +167,45 @@
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
+          {\textbf{Flood Risk Map} [\href{https://github.com/Asyboi/Geospatial}{\underline{GitHub}}] $|$ \emph{React, TypeScript, MapLibre, FastAPI}}{}
+          \resumeItemListStart
+            \resumeItem{Won 1st place out of 200+ participants at the UN Open Source Week Tech Over Hackathon}
+            \resumeItem{Turned flood forecasts up to 7 days ahead into one-page PDF decision briefs via a FastAPI backend}
+            \resumeItem{Showed responders where floods threaten young children, schools, and clinics across Uganda on a 3D map}
+            \resumeItem{Made every risk score traceable to its model, dataset, and uncertainty in a React 3D map}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Eco Router} [\href{https://devpost.com/software/zero-carbs-tonight}{\underline{Devpost}}] $|$ \emph{Optuna, FastAPI, Rust}}{}
+          \resumeItemListStart
+            \resumeItem{Won YHack's Built With Zed track out of 600+ participants via a Rust extension routing to the greenest model}
+            \resumeItem{Cut inference carbon intensity 2.9$\times$ by Optuna-tuning 60+ Qwen runs on NVIDIA DGX Spark}
+            \resumeItem{Extrapolated carbon intensity to 500B-param models via a scaling-law fit on per-token emissions}
+          \resumeItemListEnd
+      \resumeProjectHeading
           {\textbf{Bastion-Agent} [\href{https://github.com/Asyboi/bastion-agent}{\underline{GitHub}}] $|$ \emph{Python, SQLite, MCP}}{}
           \resumeItemListStart
-            \resumeItem{Compressed Python failure traces from $\sim$8K to under 600 tokens by developing an agent-first error-observability library using decorators to capture exceptions, local state, and execution flow into SQLite}
-            \resumeItem{Cut error identification from minutes of manual log reading to a single query by implementing an MCP server with 10 query tools letting coding agents diagnose failures via real-time error fingerprinting}
+            \resumeItem{Compressed Python error traces from $\sim$8K to $<$600 tokens with an agent-first observability library}
+            \resumeItem{Cut error diagnosis from minutes to one query with an MCP server exposing 10 debug tools to coding agents}
           \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{\href{https://github.com/Asyboi/Calyx}{Agentic Multilayer Platform for EMS Reports (Calyx)}} [\href{https://devpost.com/software/emt-tool}{\underline{Devpost}}] $|$ \emph{React, FastAPI, Claude/Gemini API}}{}
           \resumeItemListStart
-            \resumeItem{Built a multilayer AI orchestration platform that automates the process of writing patient care and quality improvement reports for EMTs and hospital administrators}
-            \resumeItem{Reached 90\%+ field accuracy against EMT-written ground truth across 40+ test incidents by routing body footage, radio calls, and dispatch records to specialist vision, speech, and text models under a supervising agent}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Eco Router (Yale YHack 2026 Winner)} [\href{https://devpost.com/software/zero-carbs-tonight}{\underline{Devpost}}] $|$ \emph{Optuna, FastAPI, Rust}}{}
-          \resumeItemListStart
-            \resumeItem{Identified Pareto-optimal inference configurations reducing carbon intensity by 2.9$\times$ by benchmarking 60+ Qwen model runs on NVIDIA DGX Spark across latency, quality, and SCI using Optuna Bayesian optimization}
-            \resumeItem{Extrapolated software carbon intensity for models up to 500B parameters by fitting a scaling-law regression to per-token emissions measured across Qwen model sizes}
-            \resumeItem{Won YHack 2026's Built With Zed track by shipping a Zed IDE extension built in Rust routing developers to the greenest model meeting their quality threshold, supported by a FastAPI + SQLite Pareto frontier store}
+            \resumeItem{Automated 2 EMS report types (patient care, QI) by fusing 3 data sources in a multi-agent AI platform}
+            \resumeItem{Hit 90\%+ field accuracy on 40+ incidents by routing bodycam, radio, and dispatch data to Claude/Gemini models}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
+
+
+%-----------SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: Python, TypeScript, JavaScript, C++, C, Java, Rust, SQL, R, Bash} \\
+     \textbf{Web Technologies \& Frameworks}{: FastAPI, Node.js, React, Flask, Express, Next.js, Vite, Hono, SQLite} \\
+     \textbf{Development Tools}{: Git, AWS, Docker, Kubernetes, Firebase, Cloudflare Workers, Vercel, Railway, PostgreSQL, Neon} \\
+     \textbf{Concepts}{: Software Engineering, Frontend, Backend, Full-Stack, LLM Orchestration, Machine Learning}
+    }}
+ \end{itemize}
 
 
 %-------------------------------------------
